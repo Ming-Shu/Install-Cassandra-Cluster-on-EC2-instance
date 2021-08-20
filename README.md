@@ -19,6 +19,7 @@ Commmand line:
     sudo apt update  
     sudo apt-get install cassandra   
     sudo apt-get install cassandra-tools
-    nodetool status
     
+when I run 'nodetool status'  get :  
+  
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/nodetool_status.PNG)
