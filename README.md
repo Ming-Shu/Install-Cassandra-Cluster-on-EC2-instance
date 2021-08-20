@@ -1,11 +1,15 @@
 # Install-Cassandra-Cluster-on-EC2-instance
-Let's take a look at how to install Cassandra Cluster on EC2 instance  running Ubuntu 18.04 LTS 
+Let's take a look at how to install Cassandra Cluster on EC2 instance  running Ubuntu 18.04 LTS .
+We are simulating installing a Cassandra Cluster in a single data center and a single rack. 
+The Seed controls the cluster and is used to bootstrap the other nodes in the Cassandra cluster. 
 
 EC2 type      :  t3.xlarge
 
 Operating System    :  Ubuntu 18.04 LTS
 
 openjdk version : "1.8.0_292"
+
+Cassandra version :3.11.2.
 
 Note: Cassandra is need at least 2GB, even with single-node cluster.
 
@@ -38,3 +42,30 @@ In order to connect to our Cassandra server we will need to configure it. We wil
     broadcast_address:<EC2 public_IP>
 
     broadcast_rpc_address:<EC2 public_IP>
+
+First,we are here change the cluster name to something bettter:
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/Cluster_Name.PNG)
+
+Then,cluster the first node is our seed node so we will put itsEC2 public IPv4 address for this value on all three of our servers.
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/Seed_IP.PNG)
+
+Next,we will need to change the listening address for Cassandra. Set this to the private IP address of your EC2.
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/listen_address.PNG)
+
+Other, we need to set the RPC address ,broadcast address and broadcast RPC address.
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/rpc_address.PNG)
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/broadcast_address.PNG)
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/broadcast_rpc_address.PNG)
+
+Lastly,to clear the data from the default directories:
+    cd /var/lib/cassandra/data/system
+    sudo rm -rf *
+
+Starting our Cassandra Cluster to execute the nodetool command:
+    sudo systemctl restart cassandra
+    
+Now you should be able to execute the nodetool command:
+        nodetool status
+        
+Conclusion:
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/END.PNG)
