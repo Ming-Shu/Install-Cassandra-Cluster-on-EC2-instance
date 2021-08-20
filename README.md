@@ -21,3 +21,4 @@ Commmand line:
     sudo apt-get install cassandra-tools
     nodetool status
     
+![image](https://github.com/Install-Cassandra-Cluster-on-EC2-instance/blob/main/nodetool_status.PNG)
