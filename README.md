@@ -48,10 +48,10 @@ In order to connect to our Cassandra server we will need to configure it. We wil
 
     broadcast_rpc_address:<EC2 public_IP>
 
-First,we are here change the cluster name to something bettter:
+First,we are here change the cluster name to something bettter:(Must put its same name for all servers.)
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/Cluster_Name.PNG)
 
-Then,cluster the first node is our seed node so we will put itsEC2 public IPv4 address for this value on all three of our servers.
+Then,cluster the first node is our seed node so we will put its EC2 public IPv4 address for this value on all three of our servers.
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/Seed_IP.PNG)
 
 Next,we will need to change the listening address for Cassandra. Set this to the private IP address of your EC2.
