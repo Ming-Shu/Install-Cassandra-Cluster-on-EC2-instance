@@ -29,10 +29,7 @@ In order to connect to our Cassandra server we will need to configure it. We wil
 
     cluster_name: 'Your Cluster Name'
     
-    seed_provider:
-  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
-    parameters:
-        seeds:"EC2 public_IP"
+    seeds:"EC2 public_IP"
 
     listen_address: <EC2 private_IP>
     
