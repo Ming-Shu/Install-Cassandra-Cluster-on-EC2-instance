@@ -71,5 +71,7 @@ Now you should be able to execute the nodetool command :
 
     nodetool status
         
-Conclusion:
-![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/END.PNG)
+We see our server is (U)p and it's state is (N)ormal.
+Now we can start the Cassandra service on the other two nodes.
+After the services are up we can run the command again and we should see our cluster is fully up and operational.
+![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/nodetool_status_2.PNG)
