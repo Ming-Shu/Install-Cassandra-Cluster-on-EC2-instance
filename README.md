@@ -27,6 +27,12 @@ Commmand line:
 when I run 'nodetool status'  get :    
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/nodetool_status.PNG)
 
+Note: If get reply is :
+
+    nodetool: Failed to connect to '127.0.0.1:7199' - ConnectException: 'Connection refused (Connection refused)'.
+    
+It's a RAM issue, I solved the problem after changing EC2 instance type.
+
 Configuring Cassandra
 In order to connect to our Cassandra server we will need to configure it. We will be changing configuration in the main Cassandra configuration file located at /etc/cassandra/cassandra.yaml. Open this file so and make the following changes.
 
