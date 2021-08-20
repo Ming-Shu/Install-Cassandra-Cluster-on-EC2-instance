@@ -57,8 +57,10 @@ Other, we need to set the RPC address ,broadcast address and broadcast RPC addre
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/broadcast_address.PNG)
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/broadcast_rpc_address.PNG)
 
-Lastly,to clear the data from the default directories:
+Lastly,to clear the data from the default directories :
+
     cd /var/lib/cassandra/data/system
+    
     sudo rm -rf *
 
 Starting our Cassandra Cluster to execute the nodetool command :
@@ -67,7 +69,7 @@ Starting our Cassandra Cluster to execute the nodetool command :
     
 Now you should be able to execute the nodetool command :
 
-        nodetool status
+    nodetool status
         
 Conclusion:
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/END.PNG)
