@@ -47,7 +47,11 @@ Step 8.
 
     sudo apt-get install cassandra-tools
     
-when I run 'nodetool status'  get :    
+when we run command  
+
+    nodetool status
+    
+It will get :    
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/nodetool_status.PNG)
 
 Note: If get reply is :
