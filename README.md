@@ -61,10 +61,12 @@ Lastly,to clear the data from the default directories:
     cd /var/lib/cassandra/data/system
     sudo rm -rf *
 
-Starting our Cassandra Cluster to execute the nodetool command:
+Starting our Cassandra Cluster to execute the nodetool command :
+
     sudo systemctl restart cassandra
     
-Now you should be able to execute the nodetool command:
+Now you should be able to execute the nodetool command :
+
         nodetool status
         
 Conclusion:
