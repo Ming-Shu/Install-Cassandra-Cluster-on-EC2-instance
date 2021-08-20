@@ -16,11 +16,17 @@ Note: Cassandra is need at least 2GB, even with single-node cluster.
 Commmand line:
 
 Step 1.
-    sudo apt update   
+
+    sudo apt update  
+    
 Step 2.    
-    sudo apt install openjdk-8-jdk -y  (check version : java -version)    
-Step 3.    
-    sudo apt install apt-transport-https    
+
+    sudo apt install openjdk-8-jdk -y  (check version : java -version) 
+    
+Step 3.  
+
+    sudo apt install apt-transport-https   
+    
     echo "deb http://downloads.apache.org/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list    
     curl https://downloads.apache.org/cassandra/KEYS | sudo apt-key add -   
     sudo apt update  
