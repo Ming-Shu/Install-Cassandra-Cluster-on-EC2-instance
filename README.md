@@ -27,10 +27,24 @@ Step 3.
 
     sudo apt install apt-transport-https   
     
-    echo "deb http://downloads.apache.org/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list    
+Step 4.  
+
+    echo "deb http://downloads.apache.org/cassandra/debian 311x main" | sudo tee -a /etc/apt/sources.list.d/cassandra.sources.list   
+    
+Step 5.    
+
     curl https://downloads.apache.org/cassandra/KEYS | sudo apt-key add -   
+
+Step 6.
+
     sudo apt update  
-    sudo apt-get install cassandra   
+    
+Step 7.    
+
+    sudo apt-get install cassandra 
+    
+Step 8.    
+
     sudo apt-get install cassandra-tools
     
 when I run 'nodetool status'  get :    
