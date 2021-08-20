@@ -23,3 +23,21 @@ Commmand line:
 when I run 'nodetool status'  get :  
   
 ![image](https://github.com/Ming-Shu/Install-Cassandra-Cluster-on-EC2-instance/blob/main/nodetool_status.PNG)
+
+Configuring Cassandra
+In order to connect to our Cassandra server we will need to configure it. We will be changing configuration in the main Cassandra configuration file located at /etc/cassandra/cassandra.yaml. Open this file so and make the following changes.
+
+    cluster_name: 'Your Cluster Name'
+    
+    seed_provider:
+  - class_name: org.apache.cassandra.locator.SimpleSeedProvider
+    parameters:
+        seeds:"EC2 public_IP"
+
+    listen_address: <EC2 private_IP>
+    
+    rpc_address: <0.0.0.0>
+    
+    broadcast_address:<EC2 public_IP>
+
+    broadcast_rpc_address:<EC2 public_IP>
