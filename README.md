@@ -20,3 +20,4 @@ Commmand line:
     sudo apt-get install cassandra   
     sudo apt-get install cassandra-tools
     nodetool status
+    
