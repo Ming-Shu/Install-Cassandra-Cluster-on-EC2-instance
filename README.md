@@ -1,4 +1,4 @@
-# Install-Cassandra-Cluster-on-EC2-instance-
+# Install-Cassandra-Cluster-on-EC2-instance
 Let's take a look at how to install Cassandra Cluster on EC2 instance  running Ubuntu 18.04 LTS 
 
 EC2 type      :  t3.xlarge
